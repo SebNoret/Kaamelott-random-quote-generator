@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  font-family: "Podkova", serif;
+  overflow: scroll;
+
+  background-image: linear-gradient(
+      115deg,
+      rgba(255, 166, 1, 0.8),
+      rgba(255, 254, 190, 0.7)
+    ),
+    url("background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(2, 2, 2);
+
+  box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  min-height: 70vh;
+  z-index: 10;
+}
+
+.quote-box {
+  width: 70%;
+  background-color: rgba(10, 10, 10, 0.9);
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 70%;
+  padding: 2rem;
+
+  font-size: 1.5rem;
+
+  box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+}
+
+#text {
+  max-height: 80%;
+  text-align: left;
+}
+#author {
+  font-size: 1.3rem;
+  text-align: right;
+  font-style: italic;
+}
+
+#infos {
+  font-size: 1rem;
+  text-align: right;
+  margin-bottom: 5vh;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+}
+.tweet {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.btn {
+  font-size: 1.2rem;
+
+  padding: 0.3em 1rem;
+  color: rgb(255, 255, 255);
+  background-color: #e22b87;
+  border-radius: 0.2rem;
+  border: 1px solid #db2929;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
+}
+.btn:hover {
+  color: #fff;
+  background-color: rgb(12, 33, 226);
+  border-color: #fff;
+}
+
+a i {
+  color: rgb(253, 253, 253);
+  font-size: larger;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  width: 100%;
+  /*position: fixed;
+  bottom: 0;*/
+  margin-top: 5vh;
+  z-index: -10;
+  background-color: rgb(0, 0, 0);
+}
+footer p {
+  text-align: center;
+}
+footer a {
+  color: #e22b87;
+}
+footer a:hover {
+  color: #db2929;
+}
+@media screen and (max-width: 281px) {
+  .btn {
+    font-size: 0.9rem;
+  }
+}
