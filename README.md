@@ -7,4 +7,4 @@ Github repo of the API [here](https://github.com/sin0light/api-kaamelott/).
 
 ## TODO
 the api does not accept cross origin http request. To develop this app I add to use a CORS proxy server. 
-I think i will reuse the idea of the api and create my own in nodeJS . 
+I think i will reuse the idea of the api and create my own in node JS . 
