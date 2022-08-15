@@ -13,7 +13,7 @@ const App = () => {
     character.hide();
     infos.hide();
 
-    /* https://cors-anywhere.herokuapp.com/ ce cors proxy est temporaire utilisable pendant le developpement  */
+
     $.getJSON(
       "https://thingproxy.freeboard.io/fetch/https://kaamelott.chaudie.re/api/random",
       function (data, textStatus, jqXHR) {
@@ -30,7 +30,7 @@ const App = () => {
         tweet.attr(
           "href",
           "https://twitter.com/intent/tweet?text=" +
-            encodeURIComponent('"' + citation + '"' + personnage)
+          encodeURIComponent('"' + citation + '"' + personnage)
         );
 
         quote.fadeIn(1000);
@@ -39,7 +39,17 @@ const App = () => {
         $("#tweet-quote").show();
         $("#new-quote").show();
       }
-    );
+    ).fail(() => {
+      $(".loader").hide();
+      quote.text("ERREUR DE CHARGEMENT :  impossible d'afficher la citation.")
+      quote.css("color", "red")
+      quote.fadeIn(1000);
+      $("#tweet-quote").show();
+      $("#new-quote").show();
+      console.log("Loading failed: an error has occured.")
+    });
+
+
   }
   $(document).ready(function () {
     getQuote();
