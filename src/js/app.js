@@ -8,23 +8,24 @@ const App = () => {
     $("#tweet-quote").hide();
     $("#new-quote").hide();
     $(".loader").show();
-
     quote.hide();
     character.hide();
     infos.hide();
 
 
     $.getJSON(
-      "https://thingproxy.freeboard.io/fetch/https://kaamelott.chaudie.re/api/random",
+      // "https://thingproxy.freeboard.io/fetch/https://kaamelott.chaudie.re/api/random",
+      "https://random-quote-node-api.herokuapp.com/random",
       function (data, textStatus, jqXHR) {
-        let citation = data.citation.citation.replace("[", "(");
+        let citation = data.quote.citation.replace("[", "(");
         citation = citation.replace("]", ")");
-        let personnage = data.citation.infos.personnage;
-        let saison = data.citation.infos.saison;
-        let episode = data.citation.infos.episode;
+        let personnage = data.quote.infos.personnage;
+        let saison = data.quote.infos.saison;
+        let episode = data.quote.infos.episode;
         $(".loader").hide();
 
         quote.text(citation);
+        quote.css("color", "white");
         character.text("- " + personnage);
         infos.text(saison + " Episode " + episode);
         tweet.attr(
@@ -42,7 +43,7 @@ const App = () => {
     ).fail(() => {
       $(".loader").hide();
       quote.text("ERREUR DE CHARGEMENT :  impossible d'afficher la citation.")
-      quote.css("color", "red")
+      quote.css("color", "red");
       quote.fadeIn(1000);
       $("#tweet-quote").show();
       $("#new-quote").show();
