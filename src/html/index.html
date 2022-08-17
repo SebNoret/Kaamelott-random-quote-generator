@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-<title>Citations de Kaamelott</title>
+    <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Citations de Kaamelott</title>
 </head>
+
 <body>
     <header>
-    <h1>Kaamelott générateur de citations</h1>
-    
-    </header>    
+        <h1>Kaamelott générateur de citations</h1>
+
+    </header>
     <div class="main-container">
 
-            <main id="quote-box" class="quote-box">
-                <div class="loader"></div>
-                <p id="text"></p>
-                <p id="author"></p>
-                <p id="infos"></p>
-                <div class="btn-row">
-                    <div  id="tweet-container" class="tweet">
-                        <a id="tweet-quote" title="Tweetez cette citation!"
-                        target="_top" class="btn"><i id="tweet-btn" class="fab fa-twitter"></i></i></a>
-                    </div>
-                        <button id="new-quote" class="btn">Nouvelle citation</button>
+        <main id="quote-box" class="quote-box">
+            <div class="loader"></div>
+            <p id="text"></p>
+            <p id="author"></p>
+            <p id="infos"></p>
+            <div class="btn-row">
+                <div id="tweet-container" class="tweet">
+                    <a id="tweet-quote" title="Tweetez cette citation!" target="_top" class="btn"><i id="tweet-btn"
+                            class="fab fa-twitter"></i></i></a>
                 </div>
-            </main>
+                <button id="new-quote" class="btn">Nouvelle citation</button>
+            </div>
+        </main>
     </div>
     <footer>
-        <p>Cette page utilise l'API du site <a href="https://kaamelott.chaudie.re/" target="_blank">kaamelott.chaudie.re</a></p>
-        
+        <p>Cette page utilise cette <a href="https://github.com/SebNoret/simple-node-api-for-random-quote"
+                target="_blank"> API Node/express</a><br><br> inspirée par le site <a
+                href="https://kaamelott.chaudie.re/" target="_blank">kaamelott.chaudie.re</a></p>
+        </p>
     </footer>
-    
+
     <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript"></script>-->
-   
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="application/javascript"></script>
-    
+
     <script src="app.js" type="application/javascript"></script>
 </body>
+
 </html>
