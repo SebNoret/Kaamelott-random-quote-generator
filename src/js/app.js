@@ -1,8 +1,8 @@
 const App = () => {
-  var quote = $("#text");
-  var character = $("#author");
-  var tweet = $("#tweet-quote");
-  var infos = $("#infos");
+  const quote = $("#text");
+  const character = $("#author");
+  const tweet = $("#tweet-quote");
+  const infos = $("#infos");
 
   function getQuote() {
     $("#tweet-quote").hide();
@@ -12,11 +12,9 @@ const App = () => {
     character.hide();
     infos.hide();
 
-
     $.getJSON(
-      // "https://thingproxy.freeboard.io/fetch/https://kaamelott.chaudie.re/api/random",
-      "https://random-quote-node-api.herokuapp.com/random",
-      function (data, textStatus, jqXHR) {
+      "https://quote-generator-1kxo.onrender.com/random/",
+      function (data) {
         let citation = data.quote.citation.replace("[", "(");
         citation = citation.replace("]", ")");
         let personnage = data.quote.infos.personnage;
@@ -31,7 +29,7 @@ const App = () => {
         tweet.attr(
           "href",
           "https://twitter.com/intent/tweet?text=" +
-          encodeURIComponent('"' + citation + '"' + personnage)
+            encodeURIComponent('"' + citation + '"' + personnage)
         );
 
         quote.fadeIn(1000);
@@ -42,15 +40,13 @@ const App = () => {
       }
     ).fail(() => {
       $(".loader").hide();
-      quote.text("ERREUR DE CHARGEMENT :  impossible d'afficher la citation.")
+      quote.text("ERREUR DE CHARGEMENT :  impossible d'afficher la citation.");
       quote.css("color", "red");
       quote.fadeIn(1000);
       $("#tweet-quote").show();
       $("#new-quote").show();
-      console.log("Loading failed: an error has occured.")
+      console.log("Loading failed: an error has occured.");
     });
-
-
   }
   $(document).ready(function () {
     getQuote();
