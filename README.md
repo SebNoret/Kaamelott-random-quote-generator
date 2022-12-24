@@ -17,7 +17,7 @@ Ce projet fonctionne en utilisant Jquery et consommait au départ cette [API](ht
 
 Quand j'ai développé  ce projet, l'API ne comportait pas de configuration pour autoriser les requètes cross domain (le code ayant été mis à jour depuis, peut-être que c'est le cas maintenant mais je n'en sais rien car je ne l'ai pas testé).
 
-Pour répondre à ce problème, j'ai créé ma propre version de l'api en Node/express (qui ne comprend qu'une seul route pour renvoyer les citations de manière aléatoire) que j'ai déployé sur Heroku.
+Pour répondre à ce problème, j'ai créé ma propre version de l'api en Node/express (qui ne comprend qu'une seul route pour renvoyer les citations de manière aléatoire) que j'ai déployé sur ~~Heroku~~ Render.com .
 
 Le code de l'API est disponible [ici](https://github.com/sin0light/api-kaamelott/).
 
