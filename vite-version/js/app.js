@@ -13,8 +13,7 @@ const App = () => {
     infos.hide();
 
     $.getJSON(
-      // "https://quote-generator-1kxo.onrender.com/random/",
-      "http://localhost:4000/random/",
+      "https://quote-generator-1kxo.onrender.com/random/",
       function (data) {
         let citation = data.quote.citation.replace("[", "(");
         citation = citation.replace("]", ")");

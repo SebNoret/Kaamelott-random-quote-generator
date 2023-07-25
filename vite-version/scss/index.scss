@@ -106,6 +106,8 @@ h1 {
   border: 1px solid #db2929;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
 
   box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 4px 3px 19px -4px rgba(0, 0, 0, 0.75);
