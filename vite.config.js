@@ -7,7 +7,7 @@ const testEnv = "http://localhost/dist/";
 const prodEnv =
   "https://sebnoret.github.io/portfolio/generateur-de-citations/demo/";
 export default defineConfig({
-  base: testEnv,
+  base: prodEnv,
   plugins: [
     legacy({
       targets: ["defaults", "not IE 11"],
