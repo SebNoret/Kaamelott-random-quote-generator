@@ -19,4 +19,4 @@ Quand j'ai développé ce projet, l'API ne comportait pas de configuration pour 
 
 Pour répondre à ce problème, j'ai créé ma propre version de l'api en Node/express (qui ne comprend qu'une seul route pour renvoyer les citations de manière aléatoire) que j'ai déployé sur Render.com .
 
-Le code de l'API est disponible [ici](https://github.com/sin0light/api-kaamelott/).
+Le code de l'API d'origine est disponible [ici](https://github.com/sin0light/api-kaamelott/).
