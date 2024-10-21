@@ -5,7 +5,7 @@ import { createHtmlPlugin } from "vite-plugin-html";
 import autoprefixer from "autoprefixer";
 const testEnv = "http://localhost/dist/";
 const prodEnv =
-  "https://sebnoret-portfolio.netlify.app/generateur-de-citations/demo/";
+  "https://snt-portfolio.netlify.app/generateur-de-citations/demo/";
 export default defineConfig({
   base: prodEnv,
   plugins: [
